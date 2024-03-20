@@ -34,3 +34,14 @@ try:
     print("List from SquareGenerator class: ", exception_handled_list)
 except:
     print("Exception occurred! Incorrect Input")
+
+
+#Task 8 : Inheritance
+
+class CubicGenerator(SquareGenerator):
+    def generate(self, start, end):
+       return [number ** 3 for number in range(start, end + 1)]
+
+generator = CubicGenerator()
+cubic_list = generator.generate(3, 7)
+print("List from CubicGenerator class: ",cubic_list)
