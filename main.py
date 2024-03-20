@@ -13,3 +13,17 @@ def e_squares(start, end):
     return [number**2 for number in range(start,end+1)]
 
 print("List from e_squares function: ",e_squares(3,20))
+
+
+#Task 3 : Classes
+#Create a class called SquareGenerator that has a method
+#to generate squares for a given range of numbers.
+
+class SquareGenerator:
+    def generate(self, start, end):
+        return [number ** 2 for number in range(start, end + 1)]
+
+
+generator = SquareGenerator()
+class_generator_list = generator.generate(7, 25)
+print("List from SquareGenerator class: ", class_generator_list)
