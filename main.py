@@ -37,10 +37,13 @@ except:
 
 
 #Task 8 : Inheritance
-
+#Task 9 : Function Overriding
 class CubicGenerator(SquareGenerator):
     def generate(self, start, end):
-       return [number ** 3 for number in range(start, end + 1)]
+        if start > end:
+            return Exception("Incorrect input! start value is smaller than end value")
+        else:
+            return [number ** 2 for number in range(start, end + 1)]
 
 generator = CubicGenerator()
 cubic_list = generator.generate(3, 7)
