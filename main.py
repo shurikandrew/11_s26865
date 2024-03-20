@@ -1,3 +1,5 @@
+import math
+
 #Task 1: List Comprehensions
 #Write a Python program that generates a list of squares of numbers
 #from 1 to 10 using list comprehensions.ares)
@@ -27,3 +29,8 @@ class SquareGenerator:
 generator = SquareGenerator()
 class_generator_list = generator.generate(7, 25)
 print("List from SquareGenerator class: ", class_generator_list)
+
+#Task 4 : Libraries
+
+square_root_list = [int(math.sqrt(number)) for number in class_generator_list]
+print("List of square roots from squares: ", square_root_list)
