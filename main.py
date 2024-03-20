@@ -1,6 +1,6 @@
 import math
 
-from square_generator import SquareGenerator
+from square_generator.square_generator import SquareGenerator
 
 #Task 1: List Comprehensions
 #Write a Python program that generates a list of squares of numbers
