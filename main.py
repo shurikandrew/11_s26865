@@ -23,7 +23,10 @@ print("List from e_squares function: ",e_squares(3,20))
 
 class SquareGenerator:
     def generate(self, start, end):
-        return [number ** 2 for number in range(start, end + 1)]
+        if start > end:
+            return Exception("Incorrect input! start value is smaller than end value")
+        else:
+            return [number ** 2 for number in range(start, end + 1)]
 
 
 generator = SquareGenerator()
@@ -34,3 +37,11 @@ print("List from SquareGenerator class: ", class_generator_list)
 
 square_root_list = [int(math.sqrt(number)) for number in class_generator_list]
 print("List of square roots from squares: ", square_root_list)
+
+#Task 5 : Exceptions
+
+try:
+    exception_handled_list = generator.generate(29, 25)
+    print("List from SquareGenerator class: ", exception_handled_list)
+except:
+    print("Exception occurred! Incorrect Input")
