@@ -2,6 +2,15 @@ import math
 
 from square_generator.square_generator import SquareGenerator
 
+#Task 8 : Inheritance
+#Task 9 : Function Overriding
+class CubicGenerator(SquareGenerator):
+    def generate(self, start, end):
+        if start > end:
+            return Exception("Incorrect input! start value is smaller than end value")
+        else:
+            return [number ** 2 for number in range(start, end + 1)]
+
 #Task 1: List Comprehensions
 #Write a Python program that generates a list of squares of numbers
 #from 1 to 10 using list comprehensions.ares)
@@ -18,7 +27,7 @@ def e_squares(start, end):
 
 print("List from e_squares function: ",e_squares(3,20))
 
-generator = SquareGenerator()
+generator = CubicGenerator()
 class_generator_list = generator.generate(7, 25)
 print("List from SquareGenerator class: ", class_generator_list)
 
@@ -35,15 +44,6 @@ try:
 except:
     print("Exception occurred! Incorrect Input")
 
-
-#Task 8 : Inheritance
-#Task 9 : Function Overriding
-class CubicGenerator(SquareGenerator):
-    def generate(self, start, end):
-        if start > end:
-            return Exception("Incorrect input! start value is smaller than end value")
-        else:
-            return [number ** 2 for number in range(start, end + 1)]
 
 generator = CubicGenerator()
 cubic_list = generator.generate(3, 7)
